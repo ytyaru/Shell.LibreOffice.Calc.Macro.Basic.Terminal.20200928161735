@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE script:module PUBLIC "-//OpenOffice.org//DTD OfficeDocument 1.0//EN" "module.dtd">
+<script:module xmlns:script="http://openoffice.org/2000/script" script:name="Module1" script:language="StarBasic">Sub Main
+	If ThisComponent.HasLocation() Then
+	  Print &quot;The Document URL is &quot; &amp; ThisComponent.getURL()
+	Else
+	  Print &quot;The document has not yet been stored&quot;
+	End If
+
+	MsgBox(StarDesktop.CurrentComponent.getURL &amp; &quot;\n&quot; &amp; ThisComponent.getURL &amp; &quot;\nマクロのテストです。\n&quot;)
+End Sub
+</script:module>
